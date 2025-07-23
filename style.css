@@ -90,6 +90,7 @@ header {
 .productos-destacados {
   display: flex;
   margin: 2rem;
+  font-size: 1.4rem;
   justify-content: center;
   align-items: center;
   color: var(--tema1-color2);
@@ -116,12 +117,34 @@ header {
   color: var(--tema1-color2);
 }
 
+.newsletter input:focus {
+  outline: none;
+  border: 2px solid var(--tema1-color2);
+}
+
+.main-contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .contacto {
-  background-color: var(--tema1-color3);
   padding: 40px 20px;
   text-align: left;
   color: var(--tema1-color2);
+  line-height: 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
 }
+
+.contacto a {
+  color: var(--tema1-color2);
+}
+
+.img-contacto img {
+  border-radius: 0;
+}
+
 .quienes-inicio p {
   color: var(--tema1-color4);
 }
@@ -143,6 +166,10 @@ footer {
 
 footer a {
   color: var(--tema1-color4);
+}
+
+.footer-contacto {
+  margin-top: 0;
 }
 
 .destacados {
@@ -236,6 +263,9 @@ footer a {
     margin: 0;
 }
 
+.productos {
+  margin: 10px;
+}
 /* .main-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
