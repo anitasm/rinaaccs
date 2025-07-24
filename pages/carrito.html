@@ -11,32 +11,40 @@
 
 <header>
   <div class="logo">Rina</div>
-  <nav class="nav-links">
+  <nav>
     <ul class="nav-links">
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="productos.html">PRODUCTOS</a></li>
-                <li><a href="nosotros.html">NOSOTROS</a></li>
-                <li><a href="contacto.html">CONTACTOS</a></li>
-                <li><a href="carrito.html">CARRITO</a></li>
+      <li><a href="../index.html">INICIO</a></li>
+      <li><a href="productos.html">PRODUCTOS</a></li>
+      <li><a href="nosotros.html">NOSOTROS</a></li>
+      <li><a href="contacto.html">CONTACTOS</a></li>
+      <li><a href="carrito.html">CARRITO</a></li>
     </ul>
   </nav>
 </header>
 
-<main style="padding: 20px;">
+<main class="cart-main">
   <h1>Mi Carrito</h1>
   <div class="cart">
-    <div class="cart-item" style="display: flex; align-items: center; gap: 15px;">
-      <img src="../imagenes/producto1.jpg" alt="Producto 1" style="width:100px; height:auto;">
-      <div>
-        <p><strong>Pulsera artesanal</strong></p>
-        <p>Precio: $1500</p>
-        <p>Cantidad: <input type="number" value="1" min="1" style="width:50px;"></p>
+    <div class="cart-item">
+      <img src="../assets/imagen-dos.jpeg" alt="Pulsera artesanal">
+      <div class="item-details">
+        <p class="item-name"><strong>Pulsera artesanal</strong></p>
+        <p class="item-price">Precio: $1500</p>
+        <label>Cantidad: <input type="number" value="1" min="1"></label>
       </div>
     </div>
-    <hr style="margin: 20px 0;">
+    <div class="cart-item">
+      <img src="../assets/imagen-tres.jpeg" alt="Pulsera artesanal">
+      <div class="item-details">
+        <p class="item-name"><strong>Pulsera artesanal</strong></p>
+        <p class="item-price">Precio: $1500</p>
+        <label>Cantidad: <input type="number" value="1" min="1"></label>
+      </div>
+    </div>
+    <hr>
     <div class="cart-total">
       <p><strong>Total: $1500</strong></p>
-      <button style="padding:10px 20px; background-color: var(--tema1-color2); color:white; border:none; border-radius:10px;">Finalizar compra</button>
+      <button class="btn-checkout">Finalizar compra</button>
     </div>
   </div>
 </main>
