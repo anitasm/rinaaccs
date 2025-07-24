@@ -230,7 +230,6 @@ footer a {
   flex-direction: column;
   row-gap: 10px;
   width: 20%;
-  margin: 0 5px 10px;
   background-color: var(--tema1-color3);
   padding: 20px;
   border-radius: 12px;
