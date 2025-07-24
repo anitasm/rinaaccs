@@ -283,7 +283,7 @@ footer a {
     color: var(--tema1-color4);
     padding: 20px;
     text-align: center;
-    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .producto {
@@ -383,7 +383,7 @@ footer a {
 
 .item-5 {
   grid-area: item5;
-  margin-left: 0;
+  margin-right: 0;
 }
 
 
@@ -572,11 +572,13 @@ footer a {
   }
 
   .instagram-box {
-    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
   }
 
   .producto li {
-    width: 90%;
+    width: 40%;
+
   }
 
   .quienes-inicio {
