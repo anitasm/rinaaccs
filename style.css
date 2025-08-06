@@ -4,24 +4,25 @@
   --tema1-color3: #e6d7d3;
   --tema1-color4: #f8f3f2;
 }
-* { 
+
+* {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--tema1-color1);
   color: var(--tema1-color4);
 }
 
-img { 
-  max-width: 100%; 
-  height: auto; 
+img {
+  max-width: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
-  border-radius: 15px; 
+  border-radius: 15px;
 }
 
 header {
@@ -32,6 +33,7 @@ header {
   top: 0;
   z-index: 1000;
 }
+
 .logo {
   display: flex;
   justify-content: center;
@@ -39,6 +41,7 @@ header {
   font-weight: bold;
   color: var(--tema1-color4);
 }
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -61,6 +64,7 @@ header {
   background-color: var(--tema1-color4);
   color: var(--tema1-color2);
 }
+
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -96,6 +100,71 @@ header {
   color: var(--tema1-color2);
 }
 
+.destacados {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 10px;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.contenedor-productos {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.producto {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.producto li {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 20%;
+  background-color: var(--tema1-color3);
+  padding: 20px;
+  border-radius: 12px;
+  color: var(--tema1-color2);
+  justify-content: center;
+  align-items: center;
+}
+
+.productos {
+  margin: 10px;
+}
+
+.instagram-box {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tema1-color2);
+  color: var(--tema1-color4);
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  row-gap: 10px;
+  margin-right: 30px;
+}
+.instagram-box a {
+  color: var(--tema1-color4);
+}
 
 .quienes-inicio {
   background-color: var(--tema1-color3);
@@ -108,6 +177,14 @@ header {
   justify-content: space-between;
   gap: 3rem;
 }
+.quienes-inicio p {
+  color: var(--tema1-color4);
+}
+.quienes-inicio img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
 .quienes-inicio-div {
   display: flex;
@@ -118,10 +195,11 @@ header {
   line-height: 1.5rem;
 }
 
-.quienes-inicio img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.parrafo-nosotros {
+  background-color: var(--tema1-color3);
+  padding: 40px 20px;
+  text-align: right;
+  color: var(--tema1-color2);
 }
 
 .newsletter {
@@ -132,22 +210,17 @@ header {
   margin: 20px;
   border-radius: 15px;
 }
-
-
-
 .newsletter input {
   border: none;
   padding: 10px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--tema1-color2);
   background-color: var(--tema1-color4);
   border-radius: 20px;
 }
-
 .newsletter input::placeholder {
   color: var(--tema1-color2);
 }
-
 .newsletter input:focus {
   outline: none;
   border: 2px solid var(--tema1-color2);
@@ -167,7 +240,6 @@ header {
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
 }
-
 .contacto a {
   color: var(--tema1-color2);
 }
@@ -179,15 +251,6 @@ header {
   height: 100%;
 }
 
-.quienes-inicio p {
-  color: var(--tema1-color4);
-}
-.parrafo-nosotros {
-  background-color: var(--tema1-color3);
-  padding: 40px 20px;
-  text-align: right;
-  color: var(--tema1-color2);
-}
 footer {
   text-align: left;
   background-color: var(--tema1-color2);
@@ -197,7 +260,6 @@ footer {
   line-height: 2rem;
   margin-top: 40px;
 }
-
 footer a {
   color: var(--tema1-color4);
 }
@@ -206,111 +268,14 @@ footer a {
   margin-top: 0;
 }
 
-.destacados {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    padding: 0 20px;
-    gap: 10px;
-    align-items: flex-start;
-}
-
-.producto {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 0;
-  list-style: none;
-  font-size: 0.9rem;
-}
-
-.producto li {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  width: 20%;
-  background-color: var(--tema1-color3);
-  padding: 20px;
-  border-radius: 12px;
-  color: var(--tema1-color2);
-  justify-content: center;
-  align-items: center;
-}
-
-/* Instagram Box */
-.instagram-box {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--tema1-color2); /* un rosa más oscuro */
-    color: var(--tema1-color1);
-    padding: 30px;
-    border-radius: 15px;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.instagram-box a {
-  color: var(--tema1-color4);
-}
-
-.destacados {
-    text-align: center;
-    padding: 10px;
-}
-
-.contenedor-productos {
-    display: flex;
-    align-items: stretch;
-    gap: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.instagram-box {
-    flex: 1;
-    display: flex;
-    row-gap: 10px;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--tema1-color2);
-    color: var(--tema1-color4);
-    padding: 20px;
-    text-align: center;
-    margin-right: 30px;
-}
-
-.producto {
-    display: flex;
-    flex: 3;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    list-style: none;
-    margin: 0;
-}
-
-.productos {
-  margin: 10px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "item1 item3 item7"
-    "item5 item3 item6"
-    "item2 item4 item6";
- gap: 1.5rem;
- margin: 1.5rem;
- justify-content: stretch;
- align-items: stretch;
+  grid-template-areas: "item1 item3 item7" "item5 item3 item6" "item2 item4 item6";
+  gap: 1.5rem;
+  margin: 1.5rem;
+  justify-content: stretch;
+  align-items: stretch;
 }
 
 .item-1 {
@@ -325,18 +290,15 @@ footer a {
   justify-content: center;
   text-align: center;
 }
-
 .item-1 h2 {
   color: var(--tema1-color2);
   font-size: 1.3rem;
   font-style: italic;
   margin-bottom: 10px;
 }
-
 .item-1 p {
   font-size: 1.2em;
 }
-
 
 .item-2 {
   grid-area: item2;
@@ -360,7 +322,6 @@ footer a {
 .item-3 {
   grid-area: item3;
 }
-
 .item-3 img {
   border-radius: 15px;
   width: 100%;
@@ -385,11 +346,9 @@ footer a {
   margin-right: 0;
 }
 
-
 .item-6 {
   grid-area: item6;
 }
-
 .item-6 img {
   width: 100%;
   height: 100%;
@@ -411,30 +370,25 @@ footer a {
   text-align: center;
   height: 100%;
   width: 100%;
-  line-height: 1.5rem;
 }
-
 .item-7 h2 {
   color: var(--tema1-color1);
   font-size: 1.3rem;
 }
-
 .item-7 button {
   background-color: var(--tema1-color3);
   color: var(--tema1-color2);
   border: none;
-  border-radius: 20px;
   padding: 10px 20px;
+  border-radius: 20px;
   font-size: 1em;
   cursor: pointer;
 }
-
 .item-7 button:hover {
   background-color: var(--tema1-color2);
   color: var(--tema1-color3);
 }
 
-/* ---------------- Carrito ---------------- */
 .cart-main {
   padding: 20px;
   color: var(--tema1-color2);
@@ -445,6 +399,10 @@ footer a {
   flex-direction: column;
   gap: 20px;
 }
+.cart hr {
+  border: none;
+  border-top: 1px solid var(--tema1-color2);
+}
 
 .cart-item {
   display: flex;
@@ -454,13 +412,11 @@ footer a {
   padding: 10px;
   border-radius: 12px;
 }
-
 .cart-item img {
   width: 100px;
   height: auto;
   border-radius: 10px;
 }
-
 .cart-item input {
   width: 50px;
   padding: 5px;
@@ -481,15 +437,9 @@ footer a {
   font-size: 1em;
   cursor: pointer;
 }
-
 .btn-checkout:hover {
   background-color: var(--tema1-color4);
   color: var(--tema1-color2);
-}
-
-.cart hr {
-  border: none;
-  border-top: 1px solid var(--tema1-color2);
 }
 
 @media (max-width: 600px) {
@@ -497,45 +447,32 @@ footer a {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .cart-total {
     text-align: center;
   }
 }
-
-/* Responsive design */
 @media (max-width: 992px) {
-  /* Tablet layout adjustments */
   .quienes-inicio,
   .main-contacto {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
   }
-
   .producto li {
     width: 45%;
   }
-
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "item1 item3"
-      "item5 item6"
-      "item2 item4"
-      "item7 item7";
+    grid-template-areas: "item1 item3" "item5 item6" "item2 item4" "item7 item7";
   }
 }
-
 @media (max-width: 600px) {
-  /* Mobile layout */
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
   }
-
   nav::before {
     content: "\f0c9";
     font-family: "Font Awesome 6 Free";
@@ -545,7 +482,6 @@ footer a {
     color: var(--tema1-color4);
     cursor: pointer;
   }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -559,46 +495,33 @@ footer a {
     gap: 10px;
     z-index: 1000;
   }
-
   nav:hover .nav-links,
   nav:focus-within .nav-links {
     display: flex;
   }
-
   .destacados .contenedor-productos {
     flex-direction: column;
     align-items: center;
   }
-
   .instagram-box {
     margin-right: 0;
     width: 100%;
   }
-
   .producto li {
     width: 40%;
-
   }
-
   .quienes-inicio {
     flex-direction: column;
     gap: 1rem;
   }
-
   .main-contacto {
     flex-direction: column;
     gap: 1rem;
   }
-
   .grid {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "item1"
-      "item2"
-      "item3"
-      "item4"
-      "item5"
-      "item6"
-      "item7";
+    grid-template-areas: "item1" "item2" "item3" "item4" "item5" "item6" "item7";
   }
 }
+
+/*# sourceMappingURL=style.css.map */

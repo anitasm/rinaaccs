@@ -1,0 +1,47 @@
+@use 'mixins';
+
+.cart-main {
+  padding: 20px;
+  color: var(--tema1-color2);
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--tema1-color2);
+  }
+}
+
+.cart-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: var(--tema1-color3);
+  padding: 10px;
+  border-radius: 12px;
+
+  img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid var(--tema1-color2);
+    border-radius: 10px;
+  }
+}
+
+.cart-total {
+  text-align: right;
+}
+
+.btn-checkout {
+  @include mixins.button-basic();
+}

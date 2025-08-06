@@ -1,0 +1,19 @@
+@use 'mixins';
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-image: url(assets/imagen-herotres.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  button {
+    @include mixins.button-basic();
+  }
+}

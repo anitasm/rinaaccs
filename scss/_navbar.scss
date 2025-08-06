@@ -1,0 +1,41 @@
+header {
+  background-color: var(--tema1-color2);
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--tema1-color4);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 10px 0 0;
+  gap: 20px;
+
+  li a {
+    text-decoration: none;
+    background-color: var(--tema1-color2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: var(--tema1-color4);
+    font-weight: bold;
+    font-size: 0.9em;
+
+    &:hover {
+      background-color: var(--tema1-color4);
+      color: var(--tema1-color2);
+    }
+  }
+}

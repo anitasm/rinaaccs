@@ -1,0 +1,26 @@
+.newsletter {
+  background-color: var(--tema1-color3);
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--tema1-color2);
+  margin: 20px;
+  border-radius: 15px;
+
+  input {
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--tema1-color2);
+    background-color: var(--tema1-color4);
+    border-radius: 20px;
+
+    &::placeholder {
+      color: var(--tema1-color2);
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid var(--tema1-color2);
+    }
+  }
+}

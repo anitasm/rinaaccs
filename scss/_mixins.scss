@@ -1,0 +1,14 @@
+@mixin button-basic($bg: var(--tema1-color2), $color: var(--tema1-color4), $hover-bg: var(--tema1-color4), $hover-color: var(--tema1-color2)) {
+  background-color: $bg;
+  color: $color;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-color;
+  }
+}
