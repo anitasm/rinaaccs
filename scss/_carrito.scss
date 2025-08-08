@@ -3,6 +3,7 @@
 .cart-main {
   padding: 20px;
   color: var(--tema1-color2);
+  animation: fadeInUp 1s ease both;
 }
 
 .cart {
@@ -23,7 +24,12 @@
   background-color: var(--tema1-color3);
   padding: 10px;
   border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
 
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
   img {
     width: 100px;
     height: auto;

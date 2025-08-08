@@ -15,6 +15,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--tema1-color1);
   color: var(--tema1-color4);
+  animation: fadeIn 1s ease-in both;
 }
 
 img {
@@ -23,8 +24,50 @@ img {
   display: block;
   object-fit: cover;
   border-radius: 15px;
+  transition: transform 0.3s ease;
 }
 
+img:hover {
+  transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 header {
   background-color: var(--tema1-color2);
   padding: 10px 0;
@@ -32,6 +75,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  animation: slideDown 0.6s ease-out both;
 }
 
 .logo {
@@ -59,10 +103,12 @@ header {
   color: var(--tema1-color4);
   font-weight: bold;
   font-size: 0.9em;
+  transition: background-color 0.3s, transform 0.3s;
 }
 .nav-links li a:hover {
   background-color: var(--tema1-color4);
   color: var(--tema1-color2);
+  transform: scale(1.1);
 }
 
 .hero {
@@ -72,10 +118,12 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  animation: fadeInUp 1s ease both;
 }
 .hero h1 {
   font-size: 2em;
   margin-bottom: 20px;
+  animation: fadeInUp 1s ease both;
 }
 .hero button {
   background-color: var(--tema1-color2);
@@ -85,10 +133,13 @@ header {
   border-radius: 20px;
   font-size: 1em;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  animation: pulse 2s infinite;
 }
 .hero button:hover {
   background-color: var(--tema1-color4);
   color: var(--tema1-color2);
+  transform: scale(1.05);
 }
 
 .productos-destacados {
@@ -140,6 +191,13 @@ header {
   color: var(--tema1-color2);
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease both;
+}
+.producto li:hover, .producto li:focus-within {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .productos {
@@ -161,6 +219,12 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   row-gap: 10px;
   margin-right: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease both;
+}
+.instagram-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .instagram-box a {
   color: var(--tema1-color4);
@@ -176,6 +240,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   gap: 3rem;
+  animation: fadeInUp 1s ease both;
 }
 .quienes-inicio p {
   color: var(--tema1-color4);
@@ -200,6 +265,7 @@ header {
   padding: 40px 20px;
   text-align: right;
   color: var(--tema1-color2);
+  animation: fadeInUp 1s ease both;
 }
 
 .newsletter {
@@ -209,6 +275,7 @@ header {
   color: var(--tema1-color2);
   margin: 20px;
   border-radius: 15px;
+  animation: fadeInUp 1s ease both;
 }
 .newsletter input {
   border: none;
@@ -217,6 +284,7 @@ header {
   color: var(--tema1-color2);
   background-color: var(--tema1-color4);
   border-radius: 20px;
+  transition: box-shadow 0.3s;
 }
 .newsletter input::placeholder {
   color: var(--tema1-color2);
@@ -224,12 +292,14 @@ header {
 .newsletter input:focus {
   outline: none;
   border: 2px solid var(--tema1-color2);
+  box-shadow: 0 0 10px var(--tema1-color2);
 }
 
 .main-contacto {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  animation: fadeInUp 1s ease both;
 }
 
 .contacto {
@@ -242,6 +312,10 @@ header {
 }
 .contacto a {
   color: var(--tema1-color2);
+  transition: color 0.3s;
+}
+.contacto a:hover {
+  color: var(--tema1-color3);
 }
 
 .img-contacto img {
@@ -259,9 +333,14 @@ footer {
   font-size: 1rem;
   line-height: 2rem;
   margin-top: 40px;
+  animation: fadeInUp 1s ease both;
 }
 footer a {
   color: var(--tema1-color4);
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: var(--tema1-color1);
 }
 
 .footer-contacto {
@@ -276,6 +355,13 @@ footer a {
   margin: 1.5rem;
   justify-content: stretch;
   align-items: stretch;
+}
+.grid > * {
+  animation: fadeInUp 1s ease both;
+  transition: transform 0.3s;
+}
+.grid > *:hover {
+  transform: scale(1.03);
 }
 
 .item-1 {
@@ -383,15 +469,18 @@ footer a {
   border-radius: 20px;
   font-size: 1em;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 .item-7 button:hover {
   background-color: var(--tema1-color2);
   color: var(--tema1-color3);
+  transform: scale(1.05);
 }
 
 .cart-main {
   padding: 20px;
   color: var(--tema1-color2);
+  animation: fadeInUp 1s ease both;
 }
 
 .cart {
@@ -411,6 +500,11 @@ footer a {
   background-color: var(--tema1-color3);
   padding: 10px;
   border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.cart-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .cart-item img {
   width: 100px;
@@ -436,10 +530,12 @@ footer a {
   border-radius: 20px;
   font-size: 1em;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 .btn-checkout:hover {
   background-color: var(--tema1-color4);
   color: var(--tema1-color2);
+  transform: scale(1.05);
 }
 
 @media (max-width: 600px) {

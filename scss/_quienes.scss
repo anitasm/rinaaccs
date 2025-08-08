@@ -8,6 +8,7 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 3rem;
+  animation: fadeInUp 1s ease both;
 
   p {
     color: var(--tema1-color4);
@@ -34,4 +35,5 @@
   padding: 40px 20px;
   text-align: right;
   color: var(--tema1-color2);
+  animation: fadeInUp 1s ease both;
 }

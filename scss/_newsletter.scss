@@ -5,6 +5,7 @@
   color: var(--tema1-color2);
   margin: 20px;
   border-radius: 15px;
+  animation: fadeInUp 1s ease both;
 
   input {
     border: none;
@@ -13,6 +14,7 @@
     color: var(--tema1-color2);
     background-color: var(--tema1-color4);
     border-radius: 20px;
+    transition: box-shadow 0.3s;
 
     &::placeholder {
       color: var(--tema1-color2);
@@ -21,6 +23,7 @@
     &:focus {
       outline: none;
       border: 2px solid var(--tema1-color2);
+      box-shadow: 0 0 10px var(--tema1-color2);
     }
   }
 }

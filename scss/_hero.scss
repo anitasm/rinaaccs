@@ -7,13 +7,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  animation: fadeInUp 1s ease both;
 
   h1 {
     font-size: 2em;
     margin-bottom: 20px;
+    animation: fadeInUp 1s ease both;
   }
 
   button {
     @include mixins.button-basic();
+    animation: pulse 2s infinite;
   }
 }

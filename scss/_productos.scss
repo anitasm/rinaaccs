@@ -47,6 +47,15 @@
   color: var(--tema1-color2);
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease both;
+
+  &:hover,
+  &:focus-within {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .productos {

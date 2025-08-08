@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  animation: fadeInUp 1s ease both;
 }
 
 .contacto {
@@ -14,6 +15,11 @@
 
   a {
     color: var(--tema1-color2);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--tema1-color3);
+    }
   }
 }
 
