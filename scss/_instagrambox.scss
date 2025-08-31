@@ -1,8 +1,10 @@
+@use 'variables' as *;
+
 .instagram-box {
   display: flex;
   flex-direction: column;
-  background-color: var(--tema1-color2);
-  color: var(--tema1-color4);
+  background-color: $theme-color2;
+  color: $theme-color4;
   padding: 20px;
   border-radius: 15px;
   flex: 1;
@@ -22,6 +24,6 @@
   }
 
   a {
-    color: var(--tema1-color4);
+    color: $theme-color4;
   }
 }

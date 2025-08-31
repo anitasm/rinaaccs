@@ -1,8 +1,10 @@
+@use 'variables' as *;
+
 .newsletter {
-  background-color: var(--tema1-color3);
+  background-color: $theme-color3;
   padding: 40px 20px;
   text-align: center;
-  color: var(--tema1-color4);
+  color: $theme-color4;
   margin: 20px;
   border-radius: 15px;
   animation: fadeInUp 1s ease both;
@@ -11,19 +13,19 @@
     border: none;
     padding: 10px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--tema1-color2);
-    background-color: var(--tema1-color4);
+    color: $theme-color2;
+    background-color: $theme-color4;
     border-radius: 20px;
     transition: box-shadow 0.3s;
 
     &::placeholder {
-      color: var(--tema1-color2);
+      color: $theme-color2;
     }
 
     &:focus {
       outline: none;
-      border: 2px solid var(--tema1-color2);
-      box-shadow: 0 0 10px var(--tema1-color2);
+      border: 2px solid $theme-color2;
+      box-shadow: 0 0 10px $theme-color2;
     }
   }
 }

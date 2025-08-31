@@ -1,10 +1,12 @@
+@use 'variables' as *;
+
 .productos-destacados {
   display: flex;
   margin: 2rem;
   font-size: 1.4rem;
   justify-content: center;
   align-items: center;
-  color: var(--tema1-color2);
+  color: $theme-color2;
 }
 
 .destacados {
@@ -41,10 +43,10 @@
   flex-direction: column;
   row-gap: 10px;
   width: 20%;
-  background-color: var(--tema1-color3);
+  background-color: $theme-color3;
   padding: 20px;
   border-radius: 12px;
-  color: var(--tema1-color4);
+  color: $theme-color4;
   justify-content: center;
   align-items: center;
   cursor: pointer;

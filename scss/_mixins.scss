@@ -1,4 +1,6 @@
-@mixin button-basic($bg: var(--tema1-color2), $color: var(--tema1-color4), $hover-bg: var(--tema1-color4), $hover-color: var(--tema1-color2)) {
+@use 'variables' as *;
+
+@mixin button-basic($bg: $theme-color2, $color: $theme-color4, $hover-bg: $theme-color4, $hover-color: $theme-color2) {
   background-color: $bg;
   color: $color;
   border: none;

@@ -1,5 +1,7 @@
+@use 'variables' as *;
+
 header {
-  background-color: var(--tema1-color2);
+  background-color: $theme-color2;
   padding: 10px 0;
   text-align: center;
   position: sticky;
@@ -13,7 +15,7 @@ header {
   justify-content: center;
   font-size: 2em;
   font-weight: bold;
-  color: var(--tema1-color4);
+  color: $theme-color4;
 }
 
 .nav-links {
@@ -27,17 +29,17 @@ header {
 
   li a {
     text-decoration: none;
-    background-color: var(--tema1-color2);
+    background-color: $theme-color2;
     padding: 8px 16px;
     border-radius: 20px;
-    color: var(--tema1-color4);
+    color: $theme-color4;
     font-weight: bold;
     font-size: 0.9em;
     transition: background-color 0.3s, transform 0.3s;
 
     &:hover {
-      background-color: var(--tema1-color4);
-      color: var(--tema1-color2);
+      background-color: $theme-color4;
+      color: $theme-color2;
       transform: scale(1.1);
     }
   }

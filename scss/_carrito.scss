@@ -1,8 +1,9 @@
+@use 'variables' as *;
 @use 'mixins';
 
 .cart-main {
   padding: 20px;
-  color: var(--tema1-color2);
+  color: $theme-color2;
   animation: fadeInUp 1s ease both;
 }
 
@@ -13,7 +14,7 @@
 
   hr {
     border: none;
-    border-top: 1px solid var(--tema1-color2);
+    border-top: 1px solid $theme-color2;
   }
 }
 
@@ -21,7 +22,7 @@
   display: flex;
   gap: 15px;
   align-items: center;
-  background-color: var(--tema1-color3);
+  background-color: $theme-color3;
   padding: 10px;
   border-radius: 12px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -39,7 +40,7 @@
   input {
     width: 50px;
     padding: 5px;
-    border: 1px solid var(--tema1-color2);
+    border: 1px solid $theme-color2;
     border-radius: 10px;
   }
 }

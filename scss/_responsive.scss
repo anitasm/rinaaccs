@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 @media (max-width: 600px) {
   .cart-item {
     flex-direction: column;
@@ -45,14 +47,14 @@
     font-weight: 900;
     display: block;
     font-size: 1.5rem;
-    color: var(--tema1-color4);
+    color: $theme-color4;
     cursor: pointer;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: var(--tema1-color2);
+    background-color: $theme-color2;
     position: absolute;
     top: 60px;
     left: 0;

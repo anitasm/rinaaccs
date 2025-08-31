@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +8,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--tema1-color1);
-  color: var(--tema1-color4);
+  background-color: $theme-color1;
+  color: $theme-color4;
   animation: fadeIn 1s ease-in both;
 }
 

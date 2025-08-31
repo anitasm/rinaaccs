@@ -1,7 +1,9 @@
+@use 'variables' as *;
+
 footer {
   text-align: left;
-  background-color: var(--tema1-color2);
-  color: var(--tema1-color4);
+  background-color: $theme-color2;
+  color: $theme-color4;
   padding: 20px;
   font-size: 1rem;
   line-height: 2rem;
@@ -9,11 +11,11 @@ footer {
   animation: fadeInUp 1s ease both;
 
   a {
-    color: var(--tema1-color4);
+    color: $theme-color4;
     transition: color 0.3s;
 
     &:hover {
-      color: var(--tema1-color1);
+      color: $theme-color1;
     }
   }
 }

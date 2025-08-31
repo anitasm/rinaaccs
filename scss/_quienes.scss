@@ -1,7 +1,9 @@
+@use 'variables' as *;
+
 .quienes-inicio {
-  background-color: var(--tema1-color3);
+  background-color: $theme-color3;
   text-align: center;
-  color: var(--tema1-color2);
+  color: $theme-color2;
   margin: 20px;
   border-radius: 15px;
   display: flex;
@@ -11,7 +13,7 @@
   animation: fadeInUp 1s ease both;
 
   p {
-    color: var(--tema1-color4);
+    color: $theme-color4;
   }
 
   img {
@@ -31,9 +33,9 @@
 }
 
 .parrafo-nosotros {
-  background-color: var(--tema1-color3);
+  background-color: $theme-color3;
   padding: 40px 20px;
   text-align: right;
-  color: var(--tema1-color2);
+  color: $theme-color2;
   animation: fadeInUp 1s ease both;
 }

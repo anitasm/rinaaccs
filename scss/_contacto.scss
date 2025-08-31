@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .main-contacto {
   display: flex;
   flex-direction: row;
@@ -8,17 +10,17 @@
 .contacto {
   padding: 40px 20px;
   text-align: left;
-  color: var(--tema1-color2);
+  color: $theme-color2;
   line-height: 2rem;
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
 
   a {
-    color: var(--tema1-color2);
+    color: $theme-color2;
     transition: color 0.3s;
 
     &:hover {
-      color: var(--tema1-color3);
+      color: $theme-color3;
     }
   }
 }
