@@ -1,7 +1,7 @@
 :root {
   --tema1-color1: #e9ddda;
-  --tema1-color2: #b89691;
-  --tema1-color3: #e6d7d3;
+  --tema1-color2: #b8928b;
+  --tema1-color3: #d0bab4;
   --tema1-color4: #f8f3f2;
 }
 
@@ -188,7 +188,7 @@ header {
   background-color: var(--tema1-color3);
   padding: 20px;
   border-radius: 12px;
-  color: var(--tema1-color2);
+  color: var(--tema1-color4);
   justify-content: center;
   align-items: center;
   cursor: pointer;
