@@ -1,5 +1,13 @@
 @use 'variables' as *;
 
+.h1-productos {
+    color: $theme-color2;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 1rem;
+    text-align: center;
+}
+
 .productos-destacados {
   display: flex;
   margin: 2rem;
