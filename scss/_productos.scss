@@ -2,10 +2,21 @@
 
 .h1-productos {
     color: $theme-color2;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-style: italic;
     margin: 1rem;
     text-align: center;
+}
+
+.h3-productos {
+    color: $theme-color1;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: $theme-color3;
+    padding: 10px;  
 }
 
 .productos-destacados {

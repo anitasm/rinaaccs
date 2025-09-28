@@ -1,1 +1,2 @@
-const pulseras = document
+const pulseras = document.getElementById("pulseras");
+
