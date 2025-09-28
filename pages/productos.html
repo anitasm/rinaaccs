@@ -34,9 +34,24 @@
                 <li><a href="productos.html">PRODUCTOS</a></li>
                 <li><a href="nosotros.html">NOSOTROS</a></li>
                 <li><a href="contacto.html">CONTACTOS</a></li>
-                <li><a href="carrito.html">CARRITO</a></li>
             </ul>
         </nav>
+        <div class="cart-widget" data-cart-widget>
+            <button class="cart-bubble" type="button" data-cart-toggle aria-expanded="false" aria-controls="cart-panel">
+                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                <span class="cart-count" data-cart-count>0</span>
+                <span class="sr-only">Abrir carrito</span>
+            </button>
+            <div class="cart-panel" id="cart-panel" hidden>
+                <h2>Tu carrito</h2>
+                <p class="cart-empty" data-cart-empty>Tu carrito está vacío.</p>
+                <ul class="cart-items" data-cart-items></ul>
+                <div class="cart-summary" data-cart-summary hidden>
+                    <span>Total:</span>
+                    <strong data-cart-total>$0</strong>
+                </div>
+            </div>
+        </div>
     </header>
     
 <main>
@@ -44,14 +59,62 @@
     <section class="productos">
         <div>
             <ul class="producto">
-                <li><img src="../assets/imagen-dos.jpeg" alt="Producto 1"><p>NOMBRE<br>Mini descripción<br>$xxxx</p></li>
-                <li><img src="../assets/imagen-tres.jpeg" alt="Producto 2"><p>NOMBRE<br>Mini descripción<br>$xxxx</p></li>
-                <li><img src="../assets/imagen-cuatro.jpeg" alt="Producto 3"><p>NOMBRE<br>Mini descripción<br>$xxxx</p></li>
-                <li><img src="../assets/imagen-cinco.jpeg" alt="Producto 4"><p>NOMBRE<br>Mini descripción<br>$xxxx</p></li>
-                <li><img src="../assets/imagen-seis.jpeg" alt="Producto 5"><p>NOMBRE<br>Mini descripción<br>$xxxx</p></li>
-                <li><img src="../assets/imagen-ocho.jpeg" alt="Producto 6"><p>NOMBRE<br>Mini descripción<br>$xxxx</p></li>
-                <li><img src="../assets/imagen-nueve.jpeg" alt="Producto 7"><p>NOMBRE<br>Mini descripción<br>$xxxx</p></li>
-                <li><img src="../assets/imagen-diez.jpeg" alt="Producto 8"><p>NOMBRE<br>Mini descripción<br>$xxxx</p></li>
+                <li class="product-card">
+                    <img src="../assets/imagen-dos.jpeg" alt="Pulsera Aurora">
+                    <h3>Pulsera Aurora</h3>
+                    <p>Cristales tornasol con cierre imantado.</p>
+                    <span class="product-price">$8.500</span>
+                    <button class="add-to-cart" type="button" data-product-id="catalogo-aurora" data-product-name="Pulsera Aurora" data-product-price="8500">Agregar al carrito</button>
+                </li>
+                <li class="product-card">
+                    <img src="../assets/imagen-tres.jpeg" alt="Collar Eclipse">
+                    <h3>Collar Eclipse</h3>
+                    <p>Colgante de lava volcánica y cadena dorada.</p>
+                    <span class="product-price">$12.900</span>
+                    <button class="add-to-cart" type="button" data-product-id="catalogo-eclipse" data-product-name="Collar Eclipse" data-product-price="12900">Agregar al carrito</button>
+                </li>
+                <li class="product-card">
+                    <img src="../assets/imagen-cuatro.jpeg" alt="Anillo Aura">
+                    <h3>Anillo Aura</h3>
+                    <p>Anillo regulable con cuarzo rosado pulido.</p>
+                    <span class="product-price">$6.750</span>
+                    <button class="add-to-cart" type="button" data-product-id="catalogo-aura" data-product-name="Anillo Aura" data-product-price="6750">Agregar al carrito</button>
+                </li>
+                <li class="product-card">
+                    <img src="../assets/imagen-cinco.jpeg" alt="Aros Boreal">
+                    <h3>Aros Boreal</h3>
+                    <p>Aros colgantes con cristales azules facetados.</p>
+                    <span class="product-price">$7.200</span>
+                    <button class="add-to-cart" type="button" data-product-id="catalogo-boreal" data-product-name="Aros Boreal" data-product-price="7200">Agregar al carrito</button>
+                </li>
+                <li class="product-card">
+                    <img src="../assets/imagen-seis.jpeg" alt="Pulsera Zenit">
+                    <h3>Pulsera Zenit</h3>
+                    <p>Combinación de ágatas verdes y broche regulable.</p>
+                    <span class="product-price">$9.400</span>
+                    <button class="add-to-cart" type="button" data-product-id="catalogo-zenit" data-product-name="Pulsera Zenit" data-product-price="9400">Agregar al carrito</button>
+                </li>
+                <li class="product-card">
+                    <img src="../assets/imagen-ocho.jpeg" alt="Choker Prisma">
+                    <h3>Choker Prisma</h3>
+                    <p>Choker de gamuza con cuarzos multicolor.</p>
+                    <span class="product-price">$11.800</span>
+                    <button class="add-to-cart" type="button" data-product-id="catalogo-prisma" data-product-name="Choker Prisma" data-product-price="11800">Agregar al carrito</button>
+                </li>
+                <li class="product-card">
+                    <img src="../assets/imagen-nueve.jpeg" alt="Tobillera Solstice">
+                    <h3>Tobillera Solstice</h3>
+                    <p>Tobillera de cuentas doradas y charms solares.</p>
+                    <span class="product-price">$5.600</span>
+                    <button class="add-to-cart" type="button" data-product-id="catalogo-solstice" data-product-name="Tobillera Solstice" data-product-price="5600">Agregar al carrito</button>
+                </li>
+                <li class="product-card">
+                    <img src="../assets/imagen-diez.jpeg" alt="Set Galaxia">
+                    <h3>Set Galaxia</h3>
+                    <p>Set de collar y pulsera con piedras amatistas.</p>
+                    <span class="product-price">$15.300</span>
+                    <button class="add-to-cart" type="button" data-product-id="catalogo-galaxia" data-product-name="Set Galaxia" data-product-price="15300">Agregar al carrito</button>
+                </li>
             </ul>
         </div>
     </section>
@@ -69,5 +132,6 @@
         <p><i class="fas fa-phone"></i> Tel: +54 9 387 5775307</p>
         <p><i class="fas fa-map-marker-alt"></i> Salta - Argentina</p>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>

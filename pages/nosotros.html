@@ -34,9 +34,24 @@
                 <li><a href="productos.html">PRODUCTOS</a></li>
                 <li><a href="nosotros.html">NOSOTROS</a></li>
                 <li><a href="contacto.html">CONTACTOS</a></li>
-                <li><a href="carrito.html">CARRITO</a></li>
             </ul>
         </nav>
+        <div class="cart-widget" data-cart-widget>
+            <button class="cart-bubble" type="button" data-cart-toggle aria-expanded="false" aria-controls="cart-panel">
+                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                <span class="cart-count" data-cart-count>0</span>
+                <span class="sr-only">Abrir carrito</span>
+            </button>
+            <div class="cart-panel" id="cart-panel" hidden>
+                <h2>Tu carrito</h2>
+                <p class="cart-empty" data-cart-empty>Tu carrito está vacío.</p>
+                <ul class="cart-items" data-cart-items></ul>
+                <div class="cart-summary" data-cart-summary hidden>
+                    <span>Total:</span>
+                    <strong data-cart-total>$0</strong>
+                </div>
+            </div>
+        </div>
     </header>
 <main>
     <section class="grid">
@@ -73,5 +88,6 @@
     <p><i class="fas fa-phone"></i> Tel: +54 9 387 5775307</p>
     <p><i class="fas fa-map-marker-alt"></i> Salta - Argentina</p>
 </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>

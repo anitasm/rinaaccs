@@ -30,22 +30,37 @@
     <header>
         <div class="logo">Rina</div>
         <nav>
-         <ul class="nav-links">
+            <ul class="nav-links">
                 <li><a href="index.html">INICIO</a></li>
                 <li><a href="pages/productos.html">PRODUCTOS</a></li>
                 <li><a href="pages/nosotros.html">NOSOTROS</a></li>
                 <li><a href="pages/contacto.html">CONTACTOS</a></li>
-                <li><a href="pages/carrito.html">CARRITO</a></li>
-          </ul>
-    </nav>
+            </ul>
+        </nav>
+        <div class="cart-widget" data-cart-widget>
+            <button class="cart-bubble" type="button" data-cart-toggle aria-expanded="false" aria-controls="cart-panel">
+                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                <span class="cart-count" data-cart-count>0</span>
+                <span class="sr-only">Abrir carrito</span>
+            </button>
+            <div class="cart-panel" id="cart-panel" hidden>
+                <h2>Tu carrito</h2>
+                <p class="cart-empty" data-cart-empty>Tu carrito está vacío.</p>
+                <ul class="cart-items" data-cart-items></ul>
+                <div class="cart-summary" data-cart-summary hidden>
+                    <span>Total:</span>
+                    <strong data-cart-total>$0</strong>
+                </div>
+            </div>
+        </div>
     </header>
-<main> 
+<main>
 
     <section class="hero">
         <h1>Accesorios de cristales y piedras naturales</h1>
         <a href="pages/productos.html"><button>Ver colección</button></a>
     </section>
-    
+
     <section>
          <h2 class="productos-destacados">Productos destacados</h2>
     </section>
@@ -53,10 +68,34 @@
 <section class="destacados">
     <div class="contenedor-productos">
         <ul class="producto">
-            <li><img src="assets/imagen-dos.jpeg" alt="Pulsera artesanal"><p>NOMBRE<br>Mini descripción $$$$$</p></li>
-            <li><img src="assets/imagen-tres.jpeg" alt="Pulsera artesanal"><p>NOMBRE<br>Mini descripción $$$$$</p></li>
-            <li><img src="assets/imagen-cuatro.jpeg" alt="Pulsera artesanal"><p>NOMBRE<br>Mini descripción $$$$$</p></li>
-            <li><img src="assets/imagen-cinco.jpeg" alt="Pulsera artesanal"><p>NOMBRE<br>Mini descripción $$$$$</p></li>
+            <li class="product-card">
+                <img src="assets/imagen-dos.jpeg" alt="Pulsera Aurora">
+                <h3>Pulsera Aurora</h3>
+                <p>Cristales iridiscentes con baño de plata.</p>
+                <span class="product-price">$8.500</span>
+                <button class="add-to-cart" type="button" data-product-id="destacados-aurora" data-product-name="Pulsera Aurora" data-product-price="8500">Agregar al carrito</button>
+            </li>
+            <li class="product-card">
+                <img src="assets/imagen-tres.jpeg" alt="Collar Eclipse">
+                <h3>Collar Eclipse</h3>
+                <p>Colgante circular con piedra volcánica.</p>
+                <span class="product-price">$12.900</span>
+                <button class="add-to-cart" type="button" data-product-id="destacados-eclipse" data-product-name="Collar Eclipse" data-product-price="12900">Agregar al carrito</button>
+            </li>
+            <li class="product-card">
+                <img src="assets/imagen-cuatro.jpeg" alt="Anillo Aura">
+                <h3>Anillo Aura</h3>
+                <p>Anillo regulable con cuarzo rosado.</p>
+                <span class="product-price">$6.750</span>
+                <button class="add-to-cart" type="button" data-product-id="destacados-aura" data-product-name="Anillo Aura" data-product-price="6750">Agregar al carrito</button>
+            </li>
+            <li class="product-card">
+                <img src="assets/imagen-cinco.jpeg" alt="Aros Boreal">
+                <h3>Aros Boreal</h3>
+                <p>Aros colgantes con cristales azules.</p>
+                <span class="product-price">$7.200</span>
+                <button class="add-to-cart" type="button" data-product-id="destacados-boreal" data-product-name="Aros Boreal" data-product-price="7200">Agregar al carrito</button>
+            </li>
         </ul>
         <div class="instagram-box">
             <i class="fa-brands fa-instagram fa-3x"></i>
@@ -71,7 +110,7 @@
         <p>Una marca de accesorios que busca llenar de brillos y buenas vibras todos tus looks.
             Tanto para la noche como para el día a día. Son accesorios hechos a mano, personalizados y únicos.
             No hay dos iguales!</p></div>
-        
+
         <div><img src="assets/imagen-indexdos.png" alt="Modelo luciendo accesorios"></div>
     </section>
 
@@ -81,7 +120,7 @@
         <input type="email" id="email" name="email" placeholder="Ingresá tu email">
     </section>
 </main>
-   
+
     <footer>
         <p>CONTACTANOS</p>
         <p><i class="fas fa-envelope"></i> Email: rinacoledaniaccs@gmail.com</p>
