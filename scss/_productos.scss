@@ -3,7 +3,7 @@
 .h1-productos {
     color: $theme-color2;
     font-size: 1.1rem;
-    font-style: italic;
+    // font-style: italic;
     margin: 1rem;
     text-align: center;
 }
@@ -16,7 +16,8 @@
     margin-bottom: 2rem;
     text-align: center;
     background-color: $theme-color3;
-    padding: 10px;  
+    padding: 10px;
+    border-radius: 12px;
 }
 
 .productos-destacados {

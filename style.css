@@ -138,7 +138,6 @@ header {
 .h1-productos {
   color: #b8928b;
   font-size: 1.1rem;
-  font-style: italic;
   margin: 1rem;
   text-align: center;
 }
@@ -152,6 +151,7 @@ header {
   text-align: center;
   background-color: #d0bab4;
   padding: 10px;
+  border-radius: 12px;
 }
 
 .productos-destacados {
