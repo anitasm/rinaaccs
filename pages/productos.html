@@ -40,16 +40,29 @@
     
 <main>
     <section class="h1-productos"><h1><strong>Nuestra colección</strong></h1></section>
-    <section class="productos">
-        <div>
-            <h3 class="h3-productos">Pulseras</h3>
-            <ul id="pulseras" class="producto">
-            </ul>
-            <h3 class="h3-productos">Collares</h3>
-            <ul id="collares" class="producto">
-            </ul>
-        </div>
-    </section>
+    <div class="productos-layout">
+        <section class="productos">
+            <div>
+                <h3 class="h3-productos">Pulseras</h3>
+                <ul id="pulseras" class="producto">
+                </ul>
+                <h3 class="h3-productos">Collares</h3>
+                <ul id="collares" class="producto">
+                </ul>
+            </div>
+        </section>
+        <aside class="carrito" aria-labelledby="titulo-carrito">
+            <h2 id="titulo-carrito" class="carrito__titulo">Mi carrito</h2>
+            <div class="carrito__contenido">
+                <p id="carrito-vacio" class="carrito__mensaje">Tu carrito está vacío.</p>
+                <ul id="carrito-lista" class="carrito__lista" aria-live="polite"></ul>
+            </div>
+            <div class="carrito__acciones">
+                <p class="carrito__total">Total: $<span id="carrito-total">0</span></p>
+                <button type="button" class="carrito__comprar">Continuar con la compra</button>
+            </div>
+        </aside>
+    </div>
 
     <section class="newsletter">
         <h3>UNITE A NUESTRA COMUNIDAD!!</h3>
@@ -65,5 +78,6 @@
         <p><i class="fas fa-map-marker-alt"></i> Salta - Argentina</p>
     </footer>
     <script src="../JS/productos.js"></script>
+    <script src="../JS/carrito.js"></script>
 </body>
 </html>
