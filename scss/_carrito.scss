@@ -13,7 +13,7 @@
   position: sticky;
   top: 120px;
   max-height: calc(100vh - 160px);
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .carrito__titulo {
