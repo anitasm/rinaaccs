@@ -2,10 +2,12 @@
 
 .h1-productos {
     color: $theme-color2;
-    font-size: 1.1rem;
-    // font-style: italic;
-    margin: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
     text-align: center;
+    background-color: $theme-color3;
+    padding: 10px;
 }
 
 .h3-productos {

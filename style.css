@@ -137,9 +137,12 @@ header {
 
 .h1-productos {
   color: #b8928b;
-  font-size: 1.1rem;
-  margin: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: italic;
   text-align: center;
+  background-color: #d0bab4;
+  padding: 10px;
 }
 
 .h3-productos {
