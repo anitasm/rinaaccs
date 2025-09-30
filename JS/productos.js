@@ -59,7 +59,6 @@ const datosCollares = [
     nombre: "Collar Blanco",
     precio: 6900,
     descripcionCorta: "Diseño en tonos blancos y detalles metálicos.",
-   
     imagen: "../assets/collardos.jpg"
   },
   {
@@ -136,7 +135,7 @@ function crearModalProducto() {
 
   botonCerrar.addEventListener("click", function () {
     overlay.classList.remove("is-active");
-    });
+  });
 
   overlay.addEventListener("click", function (evento) {
     if (evento.target === overlay) {
@@ -161,8 +160,10 @@ function mostrarModalProducto(producto) {
   modalProducto.titulo.textContent = producto.nombre;
   modalProducto.precio.textContent = "Precio: $" + producto.precio;
   modalProducto.botonCarrito.textContent = "Agregar al carrito";
-  modalProducto.botonCarrito.dataset.productId = producto.id;
-  modalProducto.botonCarrito.dataset.action = "agregar-carrito";
+  modalProducto.botonCarrito.onclick = function () {
+    agregarProductoAlCarrito(producto.id);
+    modalProducto.overlay.classList.remove("is-active");
+  };
   modalProducto.overlay.classList.add("is-active");
 }
 
@@ -206,8 +207,10 @@ function crearTarjetaProducto(producto, listaDestino) {
   botonAgregar.type = "button";
   botonAgregar.textContent = "Agregar al carrito";
   botonAgregar.className = "boton-producto boton-producto--carrito";
-  botonAgregar.dataset.productId = producto.id;
-  botonAgregar.dataset.action = "agregar-carrito";
+
+  botonAgregar.addEventListener("click", function () {
+    agregarProductoAlCarrito(producto.id);
+  });
 
   item.appendChild(imagen);
   item.appendChild(titulo);
