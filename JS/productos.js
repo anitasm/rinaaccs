@@ -79,48 +79,48 @@ const datosCollares = [
 
 const inventarioProductos = [];
 
-const modalProducto = crearModalProducto();
+const cardProducto = crearCardProducto();
 
-function crearModalProducto() {
+function crearCardProducto() {
   const overlay = document.createElement("div");
-  overlay.id = "modal-producto";
-  overlay.className = "modal-producto";
+  overlay.id = "card-producto";
+  overlay.className = "card-producto";
 
   const contenido = document.createElement("div");
-  contenido.className = "modal-producto__contenido";
+  contenido.className = "card-producto__contenido";
 
   const botonCerrar = document.createElement("button");
   botonCerrar.type = "button";
   botonCerrar.textContent = "✕";
   botonCerrar.setAttribute("aria-label", "Cerrar");
-  botonCerrar.className = "modal-producto__cerrar";
+  botonCerrar.className = "card-producto__cerrar";
 
   const contenedorImagen = document.createElement("div");
-  contenedorImagen.className = "modal-producto__media";
+  contenedorImagen.className = "card-producto__media";
 
   const imagen = document.createElement("img");
   imagen.alt = "";
-  imagen.className = "modal-producto__imagen";
+  imagen.className = "card-producto__imagen";
 
   contenedorImagen.appendChild(imagen);
 
   const contenedorTexto = document.createElement("div");
-  contenedorTexto.className = "modal-producto__detalle";
+  contenedorTexto.className = "card-producto__detalle";
 
   const titulo = document.createElement("h3");
-  titulo.className = "modal-producto__titulo";
+  titulo.className = "card-producto__titulo";
 
   const descripcion = document.createElement("p");
   descripcion.textContent = "Espacio para información detallada del producto.";
-  descripcion.className = "modal-producto__descripcion";
+  descripcion.className = "card-producto__descripcion";
 
   const precio = document.createElement("p");
-  precio.className = "modal-producto__precio";
+  precio.className = "card-producto__precio";
 
   const botonCarrito = document.createElement("button");
   botonCarrito.type = "button";
   botonCarrito.textContent = "Agregar al carrito";
-  botonCarrito.className = "modal-producto__boton";
+  botonCarrito.className = "card-producto__boton";
 
   contenedorTexto.appendChild(titulo);
   contenedorTexto.appendChild(descripcion);
@@ -154,17 +154,17 @@ function crearModalProducto() {
   };
 }
 
-function mostrarModalProducto(producto) {
-  modalProducto.imagen.src = producto.imagen;
-  modalProducto.imagen.alt = producto.nombre + " ampliado";
-  modalProducto.titulo.textContent = producto.nombre;
-  modalProducto.precio.textContent = "Precio: $" + producto.precio;
-  modalProducto.botonCarrito.textContent = "Agregar al carrito";
-  modalProducto.botonCarrito.onclick = function () {
+function mostrarCardProducto(producto) {
+  cardProducto.imagen.src = producto.imagen;
+  cardProducto.imagen.alt = producto.nombre + " ampliado";
+  cardProducto.titulo.textContent = producto.nombre;
+  cardProducto.precio.textContent = "Precio: $" + producto.precio;
+  cardProducto.botonCarrito.textContent = "Agregar al carrito";
+  cardProducto.botonCarrito.onclick = function () {
     agregarProductoAlCarrito(producto.id);
-    modalProducto.overlay.classList.remove("is-active");
+    cardProducto.overlay.classList.remove("is-active");
   };
-  modalProducto.overlay.classList.add("is-active");
+  cardProducto.overlay.classList.add("is-active");
 }
 
 function crearTarjetaProducto(producto, listaDestino) {
@@ -200,7 +200,7 @@ function crearTarjetaProducto(producto, listaDestino) {
   botonInfo.className = "boton-producto boton-producto--info";
 
   botonInfo.addEventListener("click", function () {
-    mostrarModalProducto(producto);
+    mostrarCardProducto(producto);
   });
 
   const botonAgregar = document.createElement("button");

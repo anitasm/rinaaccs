@@ -2,7 +2,7 @@
 @use 'variables' as *;
 @use 'mixins';
 
-.modal-producto {
+.card-producto {
   position: fixed;
   inset: 0;
   width: 100%;
@@ -20,7 +20,7 @@
   }
 }
 
-.modal-producto__contenido {
+.card-producto__contenido {
   background-color: color.adjust($theme-color1, $lightness: 12%);
   border-radius: 20px;
   padding: 24px;
@@ -33,7 +33,7 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
-.modal-producto__cerrar {
+.card-producto__cerrar {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -50,14 +50,14 @@
   }
 }
 
-.modal-producto__media {
+.card-producto__media {
   flex: 1 1 280px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modal-producto__imagen {
+.card-producto__imagen {
   width: 100%;
   max-width: 280px;
   border-radius: 12px;
@@ -65,7 +65,7 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.modal-producto__detalle {
+.card-producto__detalle {
   flex: 1 1 280px;
   display: flex;
   flex-direction: column;
@@ -73,25 +73,25 @@
   gap: 16px;
 }
 
-.modal-producto__titulo {
+.card-producto__titulo {
   margin: 0;
   color: color.adjust($theme-color2, $lightness: -25%);
 }
 
-.modal-producto__descripcion {
+.card-producto__descripcion {
   margin: 0;
   min-height: 160px;
   color: color.adjust($theme-color2, $lightness: -30%);
   line-height: 1.5;
 }
 
-.modal-producto__precio {
+.card-producto__precio {
   margin: 0;
   font-weight: 600;
   color: color.adjust($theme-color2, $lightness: -30%);
 }
 
-.modal-producto__boton {
+.card-producto__boton {
   align-self: flex-start;
   @include mixins.button-basic();
 }
