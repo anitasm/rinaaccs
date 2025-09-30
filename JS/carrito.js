@@ -12,8 +12,6 @@ const mensajeConfirmacion = document.getElementById('carrito-confirmacion');
 const carritoSeccion = document.getElementById('seccion-carrito');
 const carritoBurbuja = document.querySelector('.carrito-burbuja');
 const STORAGE_KEY = 'rinaaccs_carrito';
-
-let resaltadoTimeout = null;
 let carrito = [];
 let catalogo = {};
 
@@ -33,7 +31,6 @@ function prepararBotonBurbuja() {
 
   carritoBurbuja.addEventListener('click', function () {
     carritoSeccion.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    resaltarCarrito();
   });
 }
 
@@ -139,7 +136,6 @@ function agregarProductoAlCarrito(idProducto) {
 
   guardarCarrito();
   renderizarCarrito();
-  resaltarCarrito();
 }
 
 function eliminarProductoDelCarrito(idProducto) {
@@ -208,23 +204,6 @@ function actualizarTotales() {
   }
 
   totalResumen.textContent = totalConDescuento.toFixed(2);
-}
-
-function resaltarCarrito() {
-  if (!carritoSeccion) {
-    return;
-  }
-
-  carritoSeccion.classList.add('carrito--resaltado');
-
-  if (resaltadoTimeout) {
-    clearTimeout(resaltadoTimeout);
-  }
-
-  resaltadoTimeout = setTimeout(function () {
-    carritoSeccion.classList.remove('carrito--resaltado');
-    resaltadoTimeout = null;
-  }, 1200);
 }
 
 function renderizarCarrito() {
