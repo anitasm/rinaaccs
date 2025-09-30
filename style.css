@@ -143,6 +143,7 @@ header {
   text-align: center;
   background-color: #d0bab4;
   padding: 10px;
+  margin-top: 0;
 }
 
 .h3-productos {
@@ -220,18 +221,13 @@ header {
 }
 
 .productos-layout {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  align-items: start;
+  align-items: stretch;
   margin: 0 10px 40px;
-  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
 }
 
-@media (max-width: 900px) {
-  .productos-layout {
-    grid-template-columns: 1fr;
-  }
-}
 .modal-producto {
   position: fixed;
   inset: 0;
@@ -662,10 +658,43 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin: 0 10px 60px;
+  scroll-margin-top: 120px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.carrito--resaltado {
+  box-shadow: 0 24px 45px rgba(233, 221, 218, 0.25);
+  transform: translateY(-6px);
+}
+
+.carrito-burbuja {
   position: sticky;
-  top: 120px;
-  max-height: calc(100vh - 160px);
-  overflow-y: auto;
+  top: 100px;
+  margin: 20px 20px 0 auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #b8928b;
+  color: #e9ddda;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(233, 221, 218, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+}
+
+.carrito-burbuja:hover,
+.carrito-burbuja:focus {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(233, 221, 218, 0.4);
+}
+
+.carrito-burbuja i {
+  font-size: 1.6rem;
 }
 
 .carrito__titulo {
@@ -910,8 +939,13 @@ footer a:hover {
 
 @media (max-width: 900px) {
   .carrito {
-    position: static;
-    max-height: none;
+    margin: 0 0 40px;
+  }
+  .carrito-burbuja {
+    top: 80px;
+    margin: 16px 16px 0 auto;
+    width: 56px;
+    height: 56px;
   }
 }
 @media (max-width: 600px) {

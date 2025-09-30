@@ -39,6 +39,9 @@
     </header>
     
 <main>
+    <button type="button" class="carrito-burbuja" aria-controls="seccion-carrito" aria-label="Ir al carrito">
+        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+    </button>
     <section class="h1-productos"><h1><strong>Nuestra colección</strong></h1></section>
     <div class="productos-layout">
         <section class="productos">
@@ -51,58 +54,58 @@
                 </ul>
             </div>
         </section>
-        <aside class="carrito" aria-labelledby="titulo-carrito">
-            <h2 id="titulo-carrito" class="carrito__titulo">Mi carrito</h2>
-            <div class="carrito__contenido">
-                <p id="carrito-vacio" class="carrito__mensaje">Tu carrito está vacío.</p>
-                <ul id="carrito-lista" class="carrito__lista" aria-live="polite"></ul>
-            </div>
-            <div class="carrito__acciones">
-                <p class="carrito__total">Total: $<span id="carrito-total">0</span></p>
-                <button type="button" class="carrito__comprar">Continuar con la compra</button>
-            </div>
-            <div id="carrito-checkout" class="carrito__checkout" hidden>
-                <h3 class="carrito__checkout-titulo">Detalles de la compra</h3>
-                <form id="carrito-form" class="carrito__form">
-                    <div class="carrito__form-grid">
-                        <div class="carrito__campo">
-                            <label for="checkout-mail">Mail</label>
-                            <input type="email" id="checkout-mail" name="mail" placeholder="tuemail@ejemplo.com" required>
-                        </div>
-                        <div class="carrito__campo">
-                            <label for="checkout-nombre">Nombre</label>
-                            <input type="text" id="checkout-nombre" name="nombre" placeholder="Tu nombre" required>
-                        </div>
-                        <div class="carrito__campo">
-                            <label for="checkout-apellido">Apellido</label>
-                            <input type="text" id="checkout-apellido" name="apellido" placeholder="Tu apellido" required>
-                        </div>
-                        <div class="carrito__campo">
-                            <label for="checkout-telefono">Número de teléfono</label>
-                            <input type="tel" id="checkout-telefono" name="telefono" placeholder="Ej: 11 5555 5555" required>
-                        </div>
-                        <div class="carrito__campo carrito__campo--full">
-                            <label for="medio-pago">Medio de pago</label>
-                            <select id="medio-pago" name="medio-pago" required>
-                                <option value="" disabled selected>Seleccioná una opción</option>
-                                <option value="debito">Débito</option>
-                                <option value="transferencia">Transferencia</option>
-                                <option value="mercado-pago">Mercado Pago</option>
-                            </select>
-                        </div>
-                    </div>
-                    <p id="carrito-descuento" class="carrito__descuento" hidden>
-                        Descuento por transferencia: -$<span id="carrito-descuento-valor">0</span>
-                    </p>
-                    <p class="carrito__total-resumen">Total a pagar: $<span id="carrito-total-resumen">0</span></p>
-                    <button type="submit" id="carrito-finalizar" class="carrito__finalizar">Finalizar compra</button>
-                </form>
-                <p id="carrito-confirmacion" class="carrito__confirmacion" hidden>
-                    Nos estaremos comunicando a su número de teléfono para seguir coordinando el pago y envío :) Muchas gracias por confiar en nosotros!!
-                </p>
-            </div>
-        </aside>
     </div>
+    <section id="seccion-carrito" class="carrito" aria-labelledby="titulo-carrito">
+        <h2 id="titulo-carrito" class="carrito__titulo">Mi carrito</h2>
+        <div class="carrito__contenido">
+            <p id="carrito-vacio" class="carrito__mensaje">Tu carrito está vacío.</p>
+            <ul id="carrito-lista" class="carrito__lista" aria-live="polite"></ul>
+        </div>
+        <div class="carrito__acciones">
+            <p class="carrito__total">Total: $<span id="carrito-total">0</span></p>
+            <button type="button" class="carrito__comprar">Continuar con la compra</button>
+        </div>
+        <div id="carrito-checkout" class="carrito__checkout" hidden>
+            <h3 class="carrito__checkout-titulo">Detalles de la compra</h3>
+            <form id="carrito-form" class="carrito__form">
+                <div class="carrito__form-grid">
+                    <div class="carrito__campo">
+                        <label for="checkout-mail">Mail</label>
+                        <input type="email" id="checkout-mail" name="mail" placeholder="tuemail@ejemplo.com" required>
+                    </div>
+                    <div class="carrito__campo">
+                        <label for="checkout-nombre">Nombre</label>
+                        <input type="text" id="checkout-nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="carrito__campo">
+                        <label for="checkout-apellido">Apellido</label>
+                        <input type="text" id="checkout-apellido" name="apellido" placeholder="Tu apellido" required>
+                    </div>
+                    <div class="carrito__campo">
+                        <label for="checkout-telefono">Número de teléfono</label>
+                        <input type="tel" id="checkout-telefono" name="telefono" placeholder="Ej: 11 5555 5555" required>
+                    </div>
+                    <div class="carrito__campo carrito__campo--full">
+                        <label for="medio-pago">Medio de pago</label>
+                        <select id="medio-pago" name="medio-pago" required>
+                            <option value="" disabled selected>Seleccioná una opción</option>
+                            <option value="debito">Débito</option>
+                            <option value="transferencia">Transferencia</option>
+                            <option value="mercado-pago">Mercado Pago</option>
+                        </select>
+                    </div>
+                </div>
+                <p id="carrito-descuento" class="carrito__descuento" hidden>
+                    Descuento por transferencia: -$<span id="carrito-descuento-valor">0</span>
+                </p>
+                <p class="carrito__total-resumen">Total a pagar: $<span id="carrito-total-resumen">0</span></p>
+                <button type="submit" id="carrito-finalizar" class="carrito__finalizar">Finalizar compra</button>
+            </form>
+            <p id="carrito-confirmacion" class="carrito__confirmacion" hidden>
+                Nos estaremos comunicando a su número de teléfono para seguir coordinando el pago y envío :) Muchas gracias por confiar en nosotros!!
+            </p>
+        </div>
+    </section>
 
     <section class="newsletter">
         <h3>UNITE A NUESTRA COMUNIDAD!!</h3>

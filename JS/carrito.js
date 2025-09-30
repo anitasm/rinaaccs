@@ -10,7 +10,10 @@
   const descuentoElemento = document.getElementById('carrito-descuento');
   const descuentoValor = document.getElementById('carrito-descuento-valor');
   const mensajeConfirmacion = document.getElementById('carrito-confirmacion');
+  const carritoSeccion = document.getElementById('seccion-carrito');
+  const carritoBurbuja = document.querySelector('.carrito-burbuja');
   const STORAGE_KEY = 'rinaaccs_carrito';
+  let resaltadoTimeout = null;
 
   if (!listaCarrito || !mensajeVacio || !totalElemento || !botonComprar) {
     return;
@@ -20,6 +23,13 @@
   let carrito = cargarCarrito();
 
   renderizarCarrito();
+
+    if (carritoBurbuja && carritoSeccion) {
+    carritoBurbuja.addEventListener('click', function () {
+      carritoSeccion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      resaltarCarrito();
+    });
+  }
 
   document.addEventListener('click', function (evento) {
     const botonAgregar = evento.target.closest('[data-action="agregar-carrito"]');
@@ -140,6 +150,7 @@
 
     guardarCarrito();
     renderizarCarrito();
+    resaltarCarrito();
   }
 
   function eliminarProductoDelCarrito(idProducto) {
@@ -196,6 +207,23 @@
       minimumFractionDigits: 2,
       maximumFractionDigits: 2
     });
+  }
+
+  function resaltarCarrito() {
+    if (!carritoSeccion) {
+      return;
+    }
+
+    carritoSeccion.classList.add('carrito--resaltado');
+
+    if (resaltadoTimeout) {
+      window.clearTimeout(resaltadoTimeout);
+    }
+
+    resaltadoTimeout = window.setTimeout(function () {
+      carritoSeccion.classList.remove('carrito--resaltado');
+      resaltadoTimeout = null;
+    }, 1200);
   }
 
   function renderizarCarrito() {
