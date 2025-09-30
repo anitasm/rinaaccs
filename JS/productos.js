@@ -7,6 +7,8 @@ const datosPulseras = [
     nombre: "Cristal Rosa Triple",
     precio: 5500,
     descripcionCorta: "Pulsera con cristales rosa en triple vuelta.",
+    descripcionDetallada:
+      "Tres hebras de cristales rosados cuidadosamente engarzados para envolver la muñeca con brillo y suavidad.",
     imagen: "../assets/imagen-dos.jpeg"
   },
   {
@@ -14,6 +16,8 @@ const datosPulseras = [
     nombre: "Cadena y Cristal",
     precio: 7800,
     descripcionCorta: "Pulsera combinada con cadena y cristal central.",
+    descripcionDetallada:
+      "Diseño mixto con cadena metálica pulida y un cristal central facetado que aporta luz a cualquier look diario.",
     imagen: "../assets/imagen-tres.jpeg"
   },
   {
@@ -21,6 +25,8 @@ const datosPulseras = [
     nombre: "Blanco y Bronce Doble",
     precio: 5000,
     descripcionCorta: "Doble vuelta en tonos blanco y bronce.",
+    descripcionDetallada:
+      "Dos vueltas combinadas en cuentas blancas nacaradas y destellos bronce para un contraste delicado.",
     imagen: "../assets/imagen-cuatro.jpeg"
   },
   {
@@ -28,6 +34,8 @@ const datosPulseras = [
     nombre: "Ojo Turco Simple",
     precio: 6300,
     descripcionCorta: "Pulsera protectora con dije de ojo turco.",
+    descripcionDetallada:
+      "Cordón de cuentas translúcidas con dije de ojo turco esmaltado, ideal como amuleto de protección.",
     imagen: "../assets/imagen-cinco.jpeg"
   },
   {
@@ -35,6 +43,8 @@ const datosPulseras = [
     nombre: "Piedra Natural",
     precio: 9700,
     descripcionCorta: "Pulsera de piedras naturales seleccionadas.",
+    descripcionDetallada:
+      "Selección artesanal de piedras naturales pulidas que aportan textura y energía equilibrante.",
     imagen: "../assets/imagen-seis.jpeg"
   },
   {
@@ -42,6 +52,8 @@ const datosPulseras = [
     nombre: "Piedra Combinada",
     precio: 9500,
     descripcionCorta: "Combinación de piedras naturales y cristales.",
+    descripcionDetallada:
+      "Mezcla armónica de cristales y piedras minerales en tonos tierra para complementar cualquier estilo.",
     imagen: "../assets/imagen-ocho.jpeg"
   }
 ];
@@ -52,6 +64,8 @@ const datosCollares = [
     nombre: "Collar Rojo",
     precio: 7200,
     descripcionCorta: "Collar con cuentas rojizas y dije central.",
+    descripcionDetallada:
+      "Cadena de cuentas rojizas con un dije central metálico que resalta el escote con calidez.",
     imagen: "../assets/collaruno.jpg"
   },
   {
@@ -59,6 +73,8 @@ const datosCollares = [
     nombre: "Collar Blanco",
     precio: 6900,
     descripcionCorta: "Diseño en tonos blancos y detalles metálicos.",
+    descripcionDetallada:
+      "Perlas sintéticas blancas combinadas con detalles metálicos dorados para un acabado luminoso.",
     imagen: "../assets/collardos.jpg"
   },
   {
@@ -66,6 +82,8 @@ const datosCollares = [
     nombre: "Collar Doble Gancho",
     precio: 7600,
     descripcionCorta: "Doble capa con cierre regulable y dijes.",
+    descripcionDetallada:
+      "Dos capas superpuestas con dijes móviles y gancho regulable que permite ajustar el largo a gusto.",
     imagen: "../assets/collartres.jpg"
   },
   {
@@ -73,6 +91,8 @@ const datosCollares = [
     nombre: "Collar Infinito",
     precio: 7500,
     descripcionCorta: "Collar con dije infinito y cuentas neutras.",
+    descripcionDetallada:
+      "Cuentas en tonos neutros con dije infinito bañado en oro para simbolizar la conexión eterna.",
     imagen: "../assets/collarcuatro.jpg"
   }
 ];
@@ -111,7 +131,6 @@ function crearCardProducto() {
   titulo.className = "card-producto__titulo";
 
   const descripcion = document.createElement("p");
-  descripcion.textContent = "Espacio para información detallada del producto.";
   descripcion.className = "card-producto__descripcion";
 
   const precio = document.createElement("p");
@@ -149,6 +168,7 @@ function crearCardProducto() {
     overlay: overlay,
     imagen: imagen,
     titulo: titulo,
+    descripcion: descripcion,
     precio: precio,
     botonCarrito: botonCarrito
   };
@@ -158,6 +178,8 @@ function mostrarCardProducto(producto) {
   cardProducto.imagen.src = producto.imagen;
   cardProducto.imagen.alt = producto.nombre + " ampliado";
   cardProducto.titulo.textContent = producto.nombre;
+  cardProducto.descripcion.textContent =
+    producto.descripcionDetallada || "Espacio para información detallada del producto.";
   cardProducto.precio.textContent = "Precio: $" + producto.precio;
   cardProducto.botonCarrito.textContent = "Agregar al carrito";
   cardProducto.botonCarrito.onclick = function () {
